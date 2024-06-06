@@ -10,3 +10,380 @@ body{
     width: 70%;
     margin: 0 auto;
 }
+#showcase{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+#showcase h1{
+    font-size: 3em !important;
+}
+/*HEADER*/
+header{
+    background-color: #003F88;
+    border-bottom: 5px solid #FDC500;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+header ul{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin: 0;
+    padding: 0;
+}
+header #hamburg{
+    display: none;
+}
+header ul li{
+    list-style: none;
+    display: inline-block;
+}
+header ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-bottom: 3px solid rgba(0,0,0,0);
+}
+header ul li a:hover{
+    border-bottom: 3px solid #fff;
+    transition: 0.2s;
+}
+header ul li .active{
+    font-weight: bolder;
+    color: #FDC500 !important;
+}
+/*SECTIONS
+.header-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+}*/
+.header-section i{
+    padding: 10.5px;
+    background-color: #003F88;
+    color: #D3D3D3;
+    margin: 0;
+    cursor: pointer;
+}
+.header-section input{
+    border: 2px solid #D3D3D3;
+    padding: 5px 10px ;
+    margin: 0;
+}
+.search-events{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#hamburg-icone{
+    display: none;
+}
+/*SOBRE*/
+#sobre h2, #eventos-destaque h2, #organizacoes h2{
+    padding: 60px 0 20px 0;
+}
+#sobre-evento{
+    padding: 60px 0 20px 0;
+}
+/*.sobre-extra{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}*/
+.sobre-extra .row{
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+.sobre-btn{
+    width: 30%;
+}
+.sobre-btn{
+    padding: 10px;
+    border: 3px solid #00509d;
+    background-color: #003F88;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+.sobre-btn:hover{
+    background-color: #00296b;
+    transition: 0.2s;
+    border: 3px solid #00296b;
+}
+.secao-imagem-sobre img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+#sobre-evento ul{
+    margin: 0;
+    padding: 0px 0;
+}
+#sobre-evento ul li{
+    list-style: none;
+    padding: 10px 0;
+    font-size: 1.2em;
+}
+/*EVENTOS*/
+.evento, .local{
+    border-bottom: 5px solid #003F88;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 650px;
+    justify-content: space-between;
+}
+.local{
+    min-height: 450px;
+    margin: 50px 0;
+    text-align: center;
+}
+.local h3{
+    margin-top: 20px;
+}
+.evento h3{
+    color: #0f0f0f;
+    padding: 15px 0;
+}
+.evento p{
+    padding: 15px 0;
+}
+.evento:hover, .local:hover{
+    border-bottom: 5px solid #FDC500;
+    transition: 0.2s;
+}
+.evento a{
+    text-align: center;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    background-color: #00509d;
+    padding: 10px 0;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+.evento a:hover{
+    background-color: #00296b;
+    transition: 0.2s;
+}
+.evento img{
+    width: 100%;
+    height: auto;
+}
+.local img{
+    width: 100%;
+    height: auto;
+}
+#form-inscricao{
+    margin-top: 100px;
+}
+#form-inscricao form, #form-org form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#form-inscricao input{
+    width: 100%;
+    border: 2px solid #D3D3D3;
+    padding: 10px;
+}
+#form-org input{
+    border: 2px solid #D3D3D3;
+    padding: 10px;
+}
+#form-inscricao input[type=checkbox]{
+    width: 30px;
+}
+#form-org input[type=checkbox]{
+    width: 30px;
+}
+.checkbox-submit{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+form button{
+    background-color: #003F88;
+    padding: 15px;
+    color: #fff;
+}
+/*ORGS*/
+#organizacoes{
+    background-color: #FDC500;
+    margin: 50px 0 25px 0;
+    color: #0f0f0f;
+    border-bottom: 10px solid #00509d;
+    border-top: 10px solid #00509d;
+    text-align: center;
+    padding: 50px 0 100px 0;
+}
+.organizacao{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.organizacao img{
+    width: 156px;
+    height: auto;
+    padding: 50px 0;
+}
+.organizacao h3{
+    color: #0f0f0f;
+    font-weight: 500;
+    font-size: 1.2em;
+}
+.organizacao a{
+    text-decoration: none;
+    color: #0f0f0f;
+    font-weight: 500;
+    padding: 10px 0;
+}
+#sobre-org img{
+    width: 126px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 50px 0 25px 0;
+}
+.descricao-org{
+    text-align: center;
+    padding-bottom: 25px;
+}
+#sobre-org h2{
+    text-align: center;
+}
+.noticia-org, .evento-org{
+    padding: 0;
+    border-bottom: 5px solid #FDC500;
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+/*TRANSPORTE*/
+.transporte{
+    margin: 50px 0;
+}
+.transporte h3{
+    height: 100px;
+}
+.transporte p:first-of-type{
+    height: 70px;
+}
+.transporte i{
+    text-align: center;
+    font-size: 3em;
+    color: #00509d;
+    display: block;
+    margin: 100px 0;
+}
+#mapa{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+#mapa iframe{
+    border-top: 10px solid #00296b;
+}
+/*FOOTER*/
+footer{
+    background-color: #FDC500;
+    color: #0f0f0f;
+    padding: 50px 0;
+    margin-top: 50px !important;
+    text-align: center;
+}
+footer a{
+    text-decoration: none;
+    font-weight: 500;
+    color: #00296b;
+}
+
+/*RESPONSIVE*/
+@media (max-width: 1024px) {
+    #showcase{
+        height: 50vh !important;
+        text-align: center;
+    }
+    .secao-imagem-sobre{
+        display: none;
+    }
+    .sobre-extra .row{
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+    }
+    .sobre-btn{
+        width: 30%;
+    }
+    #sobre h2, #eventos-destaque h2, #organizacoes h2{
+        text-align: center;
+    }
+    header ul{
+        justify-content: center !important;
+    }
+    header ul li a{
+        padding: 10px;
+    }
+    #sobre{
+        text-align: center !important;
+    }
+}
+@media (max-width: 540px) {
+    .container{
+        width: 90%;
+    }
+    .sobre-extra .row{
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .sobre-btn{
+        width: 100%;
+    }
+    #sobre h2, #eventos-destaque h2, #organizacoes h2{
+        text-align: center;
+    }
+    header{
+        height: auto;
+    }
+    header ul{
+        justify-content: end !important;
+        flex-direction: column;
+    }
+    header ul li{
+        width: 100%;
+    }
+    header ul li a{
+        width: 100%;
+        padding: 15px 0;
+        display: block;
+        text-align: center;
+    }
+    #menu-item{
+        display: none;
+    }
+    #hamburg-icone{
+        display: block;
+        color: #D3D3D3;
+        font-size: 1.5em;
+        cursor: pointer;
+        padding: 10px;
+        text-align: right;
+    }
+}

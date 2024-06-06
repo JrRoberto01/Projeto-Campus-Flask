@@ -1,5 +1,5 @@
 class Evento:
-    def __init__(self, id, nome, tipo, palestrante, descricao, data, horario, local) -> None:
+    def __init__(self, id, nome, tipo, palestrante, descricao, data, horario, local, url_foto) -> None:
         self.id = id
         self.nome = nome
         self.tipo = tipo
@@ -8,3 +8,4 @@ class Evento:
         self.data = data
         self.horario = horario
         self.local = local
+        self.url_foto = url_foto

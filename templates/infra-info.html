@@ -26,8 +26,8 @@
                         <i id="hamburg-icone" onclick="mostrarMenu()" class="fa-solid fa-bars"></i>
                         <ul id="menu-item">
                             <li><a href="{{url_for('index')}}">Início</a></li>
-                            <li><a href="{{url_for('index')}}">Sobre o Campus</a></li>
-                            <li><a href="#" class="active">Eventos</a></li>
+                            <li><a href="#" class="active">Sobre o Campus</a></li>
+                            <li><a href="{{url_for('index')}}">Eventos</a></li>
                             <li><a href="{{url_for('index')}}">Clubes e Organizações</a></li>
                         </ul>
                     </div>
@@ -38,8 +38,7 @@
             <main>
                 <div class="row">
                     <div id="showcase">
-                        <h2>{{ eventoInfo.tipo }}</h2>
-                        <h1>{{ eventoInfo.nome }}</h1>
+                        <h1>Instalações do Campus</h1>
                     </div>
                 </div>
             </main>
@@ -49,18 +48,17 @@
                 <div class="row">
                     <section id="sobre-evento">
                         <div class="row">
-                            <div class="col-sm-12 col-lg-6">
-                                <h2>Informações do Evento</h2>
-                                <hr>
-                                <p>{{ eventoInfo.descricao}}</p>
-                            </div>
-                            <div class="col-sm-12 col-lg-6">
-                                <ul>
-                                    <li><b>Tipo do evento</b>: {{ eventoInfo.tipo}}</li>
-                                    <li><b>Palestrante</b>: {{ eventoInfo.palestrante}}</li>
-                                    <li><b>Data e Horário</b>: {{ eventoInfo.data }} | {{ eventoInfo.horario }}</li>
-                                    <li><b>Local</b>: {{ eventoInfo.local[0] }}</li>
-                                </ul>
+                            <div class="col">
+                                {% for campusInfo in campus_list %}
+                                    <div class="col-3">
+                                        <div class="evento">
+                                            <img src="{{url_for('static', filename='eventoInfo.url_foto')}}">
+                                            <h3>{{campusInfo.nome}}</h3>
+                                            <p class="info">{{campusInfo.bloco}}</p>
+                                            <a href="{{url_for('eventoInfo', id=eventoInfo.id)}}">Ver Detalhes</a>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
                             </div>
                         </div>
                     </section>
@@ -68,7 +66,7 @@
                 <div class="row">
                     <section id="form-inscricao">
                         <div class="row">
-                            <div class="col-sm-12 col-lg-6">
+                            <div class="col">
                                 <h2>Inscreva-se no evento agora!</h2>
                                 <hr>
                                 <form>
@@ -83,7 +81,7 @@
                                     <button type="submit">Inscreve-se</button>
                                 </form>
                             </div>
-                            <div class="col-sm-12 col-lg-6"></div>
+                            <div class="col"></div>
                         </div>
                     </section>
                 </div>
